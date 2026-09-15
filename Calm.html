@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Calmbody Co. | Cold-Pressed Ginger Shots & Detox Blends</title>
+  <meta
+    name="description"
+    content="Fresh cold-pressed ginger shots, detox elixirs, and cleanse packages made daily with no preservatives."
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --pink: #f6c6d0;
+      --pink-dark: #c97986;
+      --berry: #a84d61;
+      --peach: #f9d8c4;
+      --cream: #fff8f2;
+      --white: #ffffff;
+      --text: #49383b;
+      --muted: #866f73;
+      --border: #efdfe1;
+      --shadow: 0 18px 45px rgba(168, 77, 97, 0.12);
+      --radius: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+    .announcement {
+      background: var(--berry);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 242, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(201, 121, 134, 0.12);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Fraunces", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--berry);
+    }
+
+    .logo-heart {
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      background: var(--pink);
+      display: grid;
+      place-items: center;
+      font-size: 19px;
+      box-shadow: 0 7px 20px rgba(201, 121, 134, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--berry);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cart-button {
+      position: relative;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      transition: 0.25s;
+    }
+
+    .cart-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      width: 19px;
+      height: 19px;
+      background: var(--berry);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 20px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 60px 22px;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(246,198,208,.75), transparent 27%),
+        radial-gradient(circle at 90% 75%, rgba(249,216,196,.8), transparent 30%),
+        var(--cream);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 55px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--berry);
+      font-weight: 700;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 25px rgba(168, 77, 97, 0.06);
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(42px, 5.5vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -2.5px;
+      color: var(--text);
+    }
+
+    h1 em {
+      color: var(--berry);
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+    }
+
+    .hero-copy {
+      margin-top: 25px;
+      max-width: 555px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 52px;
+      padding: 0 23px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--berry);
+      color: white;
+      box-shadow: 0 12px 28px rgba(168, 77, 97, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 17px 34px rgba(168, 77, 97, 0.28);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--berry);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 480px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-circle {
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(246,198,208,0.5), rgba(249,216,196,0.6));
+    }
+
+    .hero-img {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 25px rgba(168, 77, 97, 0.15));
+    }
+
+    .rail {
+      background: var(--berry);
+      color: white;
+      overflow: hidden;
+      padding: 13px 0;
+    }
+
+    .rail-track {
+      display: flex;
+      width: max-content;
+      animation: scrollRail 28s linear infinite;
+    }
+
+    .rail-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 25px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    @keyframes scrollRail {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    section {
+      padding: 80px 22px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
+
+    .section-kicker {
+      color: var(--berry);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(34px, 4.5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      color: var(--text);
+    }
+
+    .section-heading p {
+      margin-top: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .shop {
+      background: white;
+    }
+
+    .category-title {
+      font-family: "Fraunces", serif;
+      font-size: 26px;
+      color: var(--berry);
+      margin: 40px 0 20px 0;
+      border-bottom: 2px solid var(--peach);
+      padding-bottom: 8px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--cream);
+      padding: 18px;
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    /* Product Image Styling */
+    .product-img-wrapper {
+      width: 100%;
+      height: 200px;
+      background: #ffffff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .product-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding-top: 6px;
+    }
+
+    .product-name {
+      font-family: "Fraunces", serif;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .product-desc {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .product-bottom {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      font-weight: 800;
+      color: var(--berry);
+      font-size: 17px;
+    }
+
+    .add-button {
+      background: var(--pink);
+      color: var(--berry);
+      min-height: 40px;
+      padding: 0 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    .add-button:hover {
+      background: var(--berry);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* BUNDLES STYLING */
+    .bundle-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .bundle-card {
+      border: 2px dashed var(--pink-dark);
+      background: #fffdfb;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bundle-info h3 {
+      font-family: "Fraunces", serif;
+      font-size: 20px;
+      color: var(--berry);
+    }
+
+    .bundle-info p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .cta {
+      padding-top: 30px;
+      padding-bottom: 80px;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 38px;
+      background: linear-gradient(135deg, #f6c6d0, #f9d8c4);
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--berry);
+      color: white;
+      padding: 55px 22px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      font-family: "Fraunces", serif;
+      font-size: 25px;
+    }
+
+    .footer-description {
+      margin-top: 13px;
+      max-width: 350px;
+      font-size: 13px;
+      line-height: 1.7;
+      opacity: .82;
+    }
+
+    footer h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    footer a, footer p {
+      display: block;
+      font-size: 13px;
+      opacity: .82;
+      margin-bottom: 9px;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 45px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.2);
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      opacity: .65;
+    }
+
+    .whatsapp {
+      position: fixed;
+      z-index: 999;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      box-shadow: 0 12px 30px rgba(37,211,102,.25);
+      transition: .25s;
+    }
+
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(49,32,36,.42);
+      backdrop-filter: blur(4px);
+      z-index: 1500;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: min(430px, 100%);
+      background: var(--cream);
+      transform: translateX(100%);
+      transition: .35s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -15px 0 45px rgba(60,35,40,.16);
+    }
+
+    .cart-overlay.open .cart-drawer {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      padding: 22px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .close-cart {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 20px;
+    }
+
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 13px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item-visual {
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .cart-item-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-info strong {
+      font-family: "Fraunces", serif;
+      font-size: 15px;
+    }
+
+    .cart-item-price {
+      margin-top: 2px;
+      color: var(--berry);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .quantity button {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .remove-item {
+      background: none;
+      color: var(--muted);
+      font-size: 11px;
+      text-decoration: underline;
+      margin-top: 8px;
+    }
+
+    .cart-footer {
+      border-top: 1px solid var(--border);
+      padding: 20px;
+      background: white;
+    }
+
+    .total-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .total-price {
+      color: var(--berry);
+      font-size: 22px;
+    }
+
+    .order-form {
+      display: grid;
+      gap: 9px;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      border-radius: 13px;
+      padding: 12px 13px;
+      outline: none;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .order-submit {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 3000;
+      left: 50%;
+      bottom: 25px;
+      transform: translate(-50%, 100px);
+      background: var(--text);
+      color: white;
+      padding: 12px 17px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0;
+      transition: .3s;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 850px) {
+      .products, .bundle-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Fresh • Natural • No Preservatives • Made Daily 
+    <audio controls loop>
+      <source src="450 - Self Worth (Official Music Video).mp3" type="audio/mpeg">
+       <source src="450 - Self Worth (Official Music Video).ogg" type="audio/ogg">
+       Your browser does not support the audio element.
+    </audio>
+
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">
+        <span class="logo-heart">♡</span>
+        Calmbody Co.
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#shop">Menu</a>
+        <a href="#bundles">Bundle Deals</a>
+        <a href="#cleanse">Cleanse Packages</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cart-button" id="cartButton" aria-label="Open cart">
+          🛍️
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">🍋 Cold-Pressed Wellness</div>
+          <h1>Elevate Your <em>Wellness Journey</em></h1>
+          <p class="hero-copy">
+            Fresh cold-pressed ginger shots, detox elixirs, and cleanse packages made daily with no added preservatives.
+          </p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary">Explore Full Menu 💕</a>
+            <a href="https://wa.me/254786255541" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp Order 💬</a>
+          </div>
+          <div class="hero-note">
+            <span>✓ Delivery Nairobi CBD: KES 100</span>
+            <span>✓ Outside CBD: Rates Vary</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-circle"></div>
+          <img src="images/ginger.jpg" alt="Calmbody Co. Wellness Bottles" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <div class="rail">
+      <div class="rail-track">
+        <div class="rail-item"><span>🫚</span> Cold-Pressed Ginger Shots (60ml)</div>
+        <div class="rail-item"><span>🌿</span> Detox Elixirs (250ml & 500ml)</div>
+        <div class="rail-item"><span>🍋</span> Cleanse Packages</div>
+        <div class="rail-item"><span>✨</span> No Preservatives</div>
+        <div class="rail-item"><span>🫚</span> Cold-Pressed Ginger Shots (60ml)</div>
+        <div class="rail-item"><span>🌿</span> Detox Elixirs (250ml & 500ml)</div>
+        <div class="rail-item"><span>🍋</span> Cleanse Packages</div>
+      </div>
+    </div>
+
+    <!-- SHOP MENU SECTION -->
+    <section class="shop" id="shop">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-kicker">Our Official Menu</div>
+          <h2>Fresh Cold-Pressed Blends 💕</h2>
+          <p>Handcrafted daily to power your immune system, digestion, and daily vitality.</p>
+        </div>
+
+        <!-- 1. SIGNATURE GINGER SHOTS (60ml) -->
+        <h3 class="category-title">Signature Ginger Shots (60ml)</h3>
+        <div class="products">
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/fire-shot.jpeg" alt="The Fire Shot" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">1. The Fire Shot</h4>
+              <p class="product-desc"><strong>Ingredients:</strong> Ginger, Lemon, Cayenne<br>✔ Boosts Immunity • Metabolism Kick</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 150</div>
+              <button class="add-button" onclick="addToCart('fire_shot')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/immunity-shield.jpeg" alt="Immunity Shield" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">2. Immunity Shield</h4>
+              <p class="product-desc"><strong>Ingredients:</strong> Ginger, Turmeric, Honey, Black Pepper<br>✔ Anti-Inflammatory • Cold & Flu Support</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 150</div>
+              <button class="add-button" onclick="addToCart('immunity_shield')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/tumeric.jpeg" alt="Slim Boost Shot" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">3. Tumeric ginger shot</h4>
+              <p class="product-desc"><strong>Ingredients:</strong> Ginger, Tumeric , Lemon, Orange ,Tumeric<br>✔  Fat Burn Support</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 100</div>
+              <button class="add-button" onclick="addToCart('slim_boost')">Add to bag +</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- 2. BUNDLE DEALS -->
+        <h3 class="category-title" id="bundles">Bundle Deals (60ml Shots)</h3>
+        <div class="bundle-grid">
+
+          <div class="bundle-card">
+            <div class="bundle-info">
+              <h3>5 Shots Bundle</h3>
+              <p>Select any 5 Signature Ginger Shots (60ml)</p>
+            </div>
+            <div style="text-align: right;">
+              <div class="price" style="margin-bottom: 8px;">KES 700</div>
+              <button class="add-button" onclick="addToCart('bundle_5')">Add to bag +</button>
+            </div>
+          </div>
+
+          <div class="bundle-card">
+            <div class="bundle-info">
+              <h3>10 Shots Bundle</h3>
+              <p>Select any 10 Signature Ginger Shots (60ml)</p>
+            </div>
+            <div style="text-align: right;">
+              <div class="price" style="margin-bottom: 8px;">KES 1,300</div>
+              <button class="add-button" onclick="addToCart('bundle_10')">Add to bag +</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3. DETOX ELIXIRS (250ml) -->
+        <h3 class="category-title">Detox Elixirs (250ml)</h3>
+        <div class="products">
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/green-glow.jpeg" alt="Green Glow Detox" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Green Glow Detox (250ml)</h4>
+              <p class="product-desc">Revitalizing green blend for daily glow and natural energy.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 350</div>
+              <button class="add-button" onclick="addToCart('green_glow_250')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/liver-cleanse.jpeg" alt="Liver Cleanse Tonic" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Liver Cleanse Tonic (250ml)</h4>
+              <p class="product-desc">Nutrient-rich formula to support liver function and flushing toxins.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 380</div>
+              <button class="add-button" onclick="addToCart('liver_cleanse_250')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/flat-tummy.jpeg" alt="Flat Tummy Elixir" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Flat Tummy Elixir (250ml)</h4>
+              <p class="product-desc">Designed to reduce bloat and support healthy digestion.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 380</div>
+              <button class="add-button" onclick="addToCart('flat_tummy_250')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/slim-sips.jpeg" alt="Slim Sips Blend" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Slim Sips Blend (250ml)</h4>
+              <p class="product-desc">Light and refreshing blend for healthy metabolism support.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 400</div>
+              <button class="add-button" onclick="addToCart('slim_sips_250')">Add to bag +</button>
+            </div>
+          </article>
+
+        </div>
+ 
+        <!-- 4. DETOX ELIXIRS (500ml) -->
+        <h3 class="category-title">Detox Elixirs (500ml)</h3>
+        <div class="products">
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/green-glow.jpeg" alt="Green Glow Detox" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Green Glow Detox (500ml)</h4>
+              <p class="product-desc">Full size nutrient-dense green elixir.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 600</div>
+              <button class="add-button" onclick="addToCart('green_glow_500')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/liver-cleanse.jpeg" alt="Liver Cleanse Tonic" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Liver Cleanse Tonic (500ml)</h4>
+              <p class="product-desc">Full size liver detoxification support.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 650</div>
+              <button class="add-button" onclick="addToCart('liver_cleanse_500')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/flat-tummy.jpeg" alt="Flat Tummy Elixir" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Flat Tummy Elixir (500ml)</h4>
+              <p class="product-desc">Full size anti-bloating and gut support elixir.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 650</div>
+              <button class="add-button" onclick="addToCart('flat_tummy_500')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="images/slim-sips.jpeg" alt="Slim Sips Blend" class="product-img" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">Slim Sips Blend (500ml)</h4>
+              <p class="product-desc">Full size metabolism support formulation.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 700</div>
+              <button class="add-button" onclick="addToCart('slim_sips_500')">Add to bag +</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- 5. CLEANSE PACKAGES -->
+        <h3 class="category-title" id="cleanse">Cleanse Packages</h3>
+        <div class="products">
+
+          <article class="product-card">
+            <div class="product-info">
+              <h4 class="product-name">1-Day Reset</h4>
+              <p class="product-desc">Includes 6 bottles to kickstart your cleanse.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 2,500</div>
+              <button class="add-button" onclick="addToCart('cleanse_1day')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-info">
+              <h4 class="product-name">3-Day Cleanse</h4>
+              <p class="product-desc">Includes 18 bottles for deep body rejuvenation.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 6,800</div>
+              <button class="add-button" onclick="addToCart('cleanse_3day')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-info">
+              <h4 class="product-name">7-Day Slim Detox Program</h4>
+              <p class="product-desc">Complete 7-day total transformation package.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 13,500</div>
+              <button class="add-button" onclick="addToCart('cleanse_7day')">Add to bag +</button>
+            </div>
+          </article>
+
+          <article class="product-card" style="border: 2px dashed var(--pink-dark);">
+            <div class="product-info">
+              <h4 class="product-name">Custom Meal Plan Add-On</h4>
+              <p class="product-desc">Tailored nutrition guide to pair with your cleanse program.</p>
+            </div>
+            <div class="product-bottom">
+              <div class="price">KES 1,500</div>
+              <button class="add-button" onclick="addToCart('meal_plan_addon')">Add to bag +</button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Elevate Your Wellness Journey 💕</h2>
+          <p>Order direct to your doorstep in Nairobi CBD or beyond.</p>
+          <a href="https://wa.me/254786255541" class="btn btn-primary" target="_blank" rel="noopener">Order on WhatsApp 💬</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Calmbody Co. 🌸</div>
+        <p class="footer-description">Cold-Pressed Ginger Shots & Detox Blends. Fresh • Natural • No Preservatives.</p>
+      </div>
+      <div>
+        <h4>Quick Navigation</h4>
+        <a href="#shop">Menu</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#cleanse">Cleanse Packages</a>
+      </div>
+      <div>
+        <h4>Delivery Info</h4>
+        <p>📍 Nairobi CBD: KES 100</p>
+        <p>🚚 Outside CBD: Rates Vary</p>
+        <p>💬 Call for Orders: +254 769 554 159</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Calmbody Co. All rights reserved.</span>
+      <span>Made with love ♡</span>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/254786255541" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <!-- CART OVERLAY -->
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-header">
+        <h3 id="cartTitle">Your Cart 🛍️</h3>
+        <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
+      </div>
+
+      <div class="cart-body" id="cartBody"></div>
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total</span>
+          <span class="total-price" id="cartTotal">KES 0</span>
+        </div>
+
+        <form class="order-form" id="orderForm">
+          <input type="text" id="customerName" placeholder="Your name" required />
+          <input type="tel" id="customerPhone" placeholder="Phone number" required />
+          <select id="orderType" required>
+            <option value="">Delivery Location?</option>
+            <option value="Nairobi CBD (KES 100)">Nairobi CBD (KES 100)</option>
+            <option value="Outside CBD">Outside CBD (Rates Vary)</option>
+            <option value="Collection">Self Collection</option>
+          </select>
+          <input type="text" id="location" placeholder="Specific Delivery Address / Building" />
+          <textarea id="orderNote" placeholder="Flavours chosen (for bundles) or notes 💕"></textarea>
+
+          <button type="submit" class="btn btn-primary order-submit">Order via WhatsApp 💬</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status">Added to cart 💕</div>
+
+  <script>
+    const WHATSAPP_NUMBER = "254786255541";
+
+    /* EXACT MENU PRODUCTS DATA WITH IMAGE PATHS */
+    const PRODUCTS = {
+      // Signature Ginger Shots (60ml)
+      fire_shot: { id: "fire_shot", name: "1. The Fire Shot (60ml)", image: "images/fire-shot.jpg", price: 150 },
+      immunity_shield: { id: "immunity_shield", name: "2. Immunity Shield (60ml)", image: "images/immunity-shield.jpg", price: 180 },
+      slim_boost: { id: "slim_boost", name: "3. Slim Boost Shot (60ml)", image: "images/slim-boost.jpg", price: 180 },
+
+      // Bundles
+      bundle_5: { id: "bundle_5", name: "5 Shots Bundle (60ml)", image: "images/bundle-pack.jpg", price: 700 },
+      bundle_10: { id: "bundle_10", name: "10 Shots Bundle (60ml)", image: "images/bundle-pack.jpg", price: 1300 },
+
+      // Detox Elixirs (250ml)
+      green_glow_250: { id: "green_glow_250", name: "Green Glow Detox (250ml)", image: "images/green-glow.jpg", price: 350 },
+      liver_cleanse_250: { id: "liver_cleanse_250", name: "Liver Cleanse Tonic (250ml)", image: "images/liver-cleanse.jpg", price: 380 },
+      flat_tummy_250: { id: "flat_tummy_250", name: "Flat Tummy Elixir (250ml)", image: "images/flat-tummy.jpg", price: 380 },
+      slim_sips_250: { id: "slim_sips_250", name: "Slim Sips Blend (250ml)", image: "images/slim-sips.jpg", price: 400 },
+
+      // Detox Elixirs (500ml)
+      green_glow_500: { id: "green_glow_500", name: "Green Glow Detox (500ml)", image: "images/green-glow.jpg", price: 600 },
+      liver_cleanse_500: { id: "liver_cleanse_500", name: "Liver Cleanse Tonic (500ml)", image: "images/liver-cleanse.jpg", price: 650 },
+      flat_tummy_500: { id: "flat_tummy_500", name: "Flat Tummy Elixir (500ml)", image: "images/flat-tummy.jpg", price: 650 },
+      slim_sips_500: { id: "slim_sips_500", name: "Slim Sips Blend (500ml)", image: "images/slim-sips.jpg", price: 700 },
+
+      // Cleanse Packages
+      cleanse_1day: { id: "cleanse_1day", name: "1-Day Reset Cleanse (6 bottles)", image: "images/cleanse-pack.jpg", price: 2500 },
+      cleanse_3day: { id: "cleanse_3day", name: "3-Day Cleanse (18 bottles)", image: "images/cleanse-pack.jpg", price: 6800 },
+      cleanse_7day: { id: "cleanse_7day", name: "7-Day Slim Detox Program", image: "images/cleanse-pack.jpg", price: 13500 },
+      meal_plan_addon: { id: "meal_plan_addon", name: "Custom Meal Plan Add-On", image: "images/meal-plan.jpg", price: 1500 }
+    };
+
+    let cart = JSON.parse(localStorage.getItem("calmbodyCoCart")) || {};
+
+    const cartButton = document.getElementById("cartButton");
+    const cartOverlay = document.getElementById("cartOverlay");
+    const closeCart = document.getElementById("closeCart");
+    const cartBody = document.getElementById("cartBody");
+    const cartTotal = document.getElementById("cartTotal");
+    const cartCount = document.getElementById("cartCount");
+    const toast = document.getElementById("toast");
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+    const orderForm = document.getElementById("orderForm");
+
+    function saveCart() {
+      localStorage.setItem("calmbodyCoCart", JSON.stringify(cart));
+    }
+
+    function addToCart(productId) {
+      if (!PRODUCTS[productId]) return;
+      cart[productId] = (cart[productId] || 0) + 1;
+      saveCart();
+      renderCart();
+      showToast(`${PRODUCTS[productId].name} added 💕`);
+      openCart();
+    }
+
+    function changeQuantity(productId, amount) {
+      if (!cart[productId]) return;
+      cart[productId] += amount;
+      if (cart[productId] <= 0) delete cart[productId];
+      saveCart();
+      renderCart();
+    }
+
+    function removeItem(productId) {
+      delete cart[productId];
+      saveCart();
+      renderCart();
+    }
+
+    function getCartCount() {
+      return Object.values(cart).reduce((a, b) => a + b, 0);
+    }
+
+    function getCartTotal() {
+      return Object.entries(cart).reduce((total, [id, qty]) => total + (PRODUCTS[id].price * qty), 0);
+    }
+
+    function renderCart() {
+      const count = getCartCount();
+      const total = getCartTotal();
+
+      cartCount.textContent = count;
+      cartTotal.textContent = `KES ${total.toLocaleString()}`;
+
+      if (count === 0) {
+        cartBody.innerHTML = `
+          <div class="empty-cart">
+            <div style="font-size:40px;margin-bottom:10px;">🛍️</div>
+            <strong>Your cart is empty</strong>
+            <p style="margin-top:5px;">Add your detox shots and elixirs 💕</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartBody.innerHTML = Object.entries(cart)
+        .map(([id, qty]) => {
+          const item = PRODUCTS[id];
+          return `
+            <div class="cart-item">
+              <div class="cart-item-visual">
+                <img src="${item.image}" alt="${item.name}" />
+              </div>
+              <div class="cart-item-info">
+                <strong>${item.name}</strong>
+                <div class="cart-item-price">KES ${item.price.toLocaleString()}</div>
+                <div class="quantity">
+                  <button type="button" onclick="changeQuantity('${id}', -1)">−</button>
+                  <span>${qty}</span>
+                  <button type="button" onclick="changeQuantity('${id}', 1)">+</button>
+                </div>
+                <button type="button" class="remove-item" onclick="removeItem('${id}')">Remove</button>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    function openCart() {
+      cartOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCartDrawer() {
+      cartOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    cartButton.addEventListener("click", openCart);
+    closeCart.addEventListener("click", closeCartDrawer);
+    cartOverlay.addEventListener("click", (e) => { if (e.target === cartOverlay) closeCartDrawer(); });
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      menuToggle.textContent = navLinks.classList.contains("open") ? "×" : "☰";
+    });
+
+    let toastTimeout;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    orderForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (getCartCount() === 0) {
+        showToast("Please add items to your cart first 💕");
+        return;
+      }
+
+      const name = document.getElementById("customerName").value.trim();
+      const phone = document.getElementById("customerPhone").value.trim();
+      const orderType = document.getElementById("orderType").value;
+      const location = document.getElementById("location").value.trim();
+      const note = document.getElementById("orderNote").value.trim();
+
+      let msg = `Hello Calmbody Co. 🌸%0A%0A`;
+      msg += `I would like to place an order:%0A%0A`;
+
+      Object.entries(cart).forEach(([id, qty]) => {
+        const item = PRODUCTS[id];
+        msg += `• ${item.name} × ${qty} — KES ${(item.price * qty).toLocaleString()}%0A`;
+      });
+
+      msg += `%0A*Total: KES ${getCartTotal().toLocaleString()}*%0A%0A`;
+      msg += `Name: ${encodeURIComponent(name)}%0A`;
+      msg += `Phone: ${encodeURIComponent(phone)}%0A`;
+      msg += `Delivery Option: ${encodeURIComponent(orderType)}%0A`;
+      if (location) msg += `Address: ${encodeURIComponent(location)}%0A`;
+      if (note) msg += `Notes: ${encodeURIComponent(note)}%0A`;
+
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank", "noopener,noreferrer");
+    });
+
+    renderCart();
+  </script>
+
+</body>
+</html>
